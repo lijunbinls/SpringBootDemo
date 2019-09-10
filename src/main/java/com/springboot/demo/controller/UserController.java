@@ -25,21 +25,21 @@ public class UserController {
 		
 		User user = new User();
 		user.setAge(100);
-		user.setName("李四");
+		user.setName("张三");
 		user.setBirthday(new Date());
 		user.setId(10);
 		
 		return JSONResult.ok(user);
 	}
 	
-	@RequestMapping("/getResource")
+	/*@RequestMapping("/getResource")
 	public JSONResult getResource() {
 		
 		Resource bean = new Resource();
 		BeanUtils.copyProperties(resource, bean);
 
 		return JSONResult.ok(bean);
-	}
+	}*/
 	
 
 }
