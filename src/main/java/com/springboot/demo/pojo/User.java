@@ -25,6 +25,8 @@ public class User {
 	@JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss a",locale="zh",timezone = "GMT+8")
 	private Date birthday;
 	
+	private String desc;
+	
 	
 	public int getId() {
 		return id;
@@ -50,6 +52,14 @@ public class User {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	
+	
 
 	
 	
