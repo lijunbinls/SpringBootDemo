@@ -1,4 +1,4 @@
-package com.springboot.demo.pojo;
+package com.springbootDemo.pojo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

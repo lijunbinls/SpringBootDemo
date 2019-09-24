@@ -1,4 +1,4 @@
-package com.springboot.demo.controller;
+package com.springbootDemo.controller;
 
 import java.util.Date;
 
@@ -7,9 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.demo.pojo.JSONResult;
-import com.springboot.demo.pojo.Resource;
-import com.springboot.demo.pojo.User;
+import com.springbootDemo.pojo.JSONResult;
+import com.springbootDemo.pojo.LjUser;
+import com.springbootDemo.pojo.Resource;
+import com.springbootDemo.pojo.User;
+import com.springbootDemo.service.UserService;
 
 /**
  * 
@@ -44,7 +46,6 @@ public class UserController {
 
 		return JSONResult.ok(bean);
 	}
-	
 	
 
 }
