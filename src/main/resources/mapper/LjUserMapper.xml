@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springbootDemo.mapper.LjUserMapper" >
+  <resultMap id="BaseResultMap" type="com.springbootDemo.pojo.LjUser" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="CHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="selectAlls" resultType="com.springbootDemo.pojo.LjUser" parameterType="java.lang.String">
+  
+  select * from lj_user
+  
+  </select>
+  
+  
+  
+</mapper>

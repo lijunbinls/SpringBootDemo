@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <title>测试</title>
+    <script type="text/javascript" th:src="@{/static/js/test.js}"></script>
+</head>
+<body>
+
+	<div th:object="${user}">
+		编号：<input th:value="*{id }"><br/>
+		名字：<input th:value="*{name }"><br/>
+		年龄：<input th:value="*{age }"><br/>
+		生日：<input th:value="*{#dates.format(birthday, 'yyyy-MM-dd')}"><br/>
+	</div>
+	
+	<span>text与utext的区别</span><br/>
+	text:<span th:text="${user.desc }">Hello shenzhen</span><br/>
+	utext:<span th:utext="${user.desc }">Hello shenzhen</span><br/>
+	URL:<a href="" th:href="@{https://www.baidu.com}">百度</a><br/>
+	
+	
+	<form th:action="@{/thymeleaf/center}" method="post" th:object="${user}" th:method="post">
+	     <input type="text" th:field=*{name} />
+	     <input type="submit" />
+	</form>
+	
+	<span th:if="${user.age } == 18">等于十八</span><br/>
+	<span th:if="${user.age } gt 18">大于</span><br/>
+	<span th:if="${user.age } lt 18">小于</span><br/>
+	<span th:if="${user.age } ge 18">大于等于</span><br/>
+	<span th:if="${user.age } le 18">小于等于</span><br/>
+	
+	<select>
+	    <option th:selected="${user.name eq 'meibian'}">meibian</option>
+	    <option th:selected="${user.name eq '张大帅'}">张大帅</option>
+	    <option th:selected="${user.name eq 'bian'}">bian</option>
+	</select>
+	
+	<div th:switch="${user.name}">
+	
+	    <p th:case="'张大帅'">张大帅</p>
+	    <p th:case="#{roles.manager}">普通管理员</p>
+	    <p th:case="#{roles.superadmin}">超级管理员</p>
+	    <p th:case="*">其他用户</p>
+	
+	
+	</div>
+	
+
+</body>
+</html>
